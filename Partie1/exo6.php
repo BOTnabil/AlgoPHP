@@ -12,6 +12,7 @@ $prixHT = 9.99;
 $tauxTVA = 0.2;
 $totalTTC = $nbArticles * $prixHT * (1 + $tauxTVA);
 
+//Affichage
 echo "Prix unitaire de l’article : $prixHT<br>
 Quantité : $nbArticles<br>
 Taux de TVA : $tauxTVA<br>

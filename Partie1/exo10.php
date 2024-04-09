@@ -12,10 +12,12 @@ $prixTTC = 152;
 $montantVerse = 200;
 $resteApayer = $montantVerse-$prixTTC;
 
+//Calculs de la monnaie à rendre
 $billet10 = intdiv ($resteApayer, 10);
 $billet5 = intdiv (($resteApayer - 10 * $billet10), 5);
 $piece2 = intdiv (($resteApayer - 10 * $billet10 - 5 * $billet5), 2);
 $piece1 = intdiv (($resteApayer - 10 * $billet10 - 5 * $billet5 - 2 * $piece2), 1);
  
+//Affichage
 echo "Rendue de monnaie :<br>
 $billet10 billets de 10 € - $billet5 billets de 5 €  $piece2 pièces de 2 € - $piece1 pièces de 1 €";

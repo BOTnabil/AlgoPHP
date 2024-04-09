@@ -14,6 +14,7 @@ Si la catégorie n’est pas gérée, merci de le préciser.
 
 $age = 10;
 
+//Affichage en fonction des conditions
 if(gettype($age) == "double" || gettype($age) == "integer" ) {
     switch(true) {
         case $age >= 12: echo "Cadet<br>"; break;

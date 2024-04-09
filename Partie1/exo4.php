@@ -10,6 +10,7 @@ $phrase ="Engage le jeu que je le gagne" ;
 $phrasemin = strtolower($phrase);
 $phraseclean = str_replace(" ","",$phrasemin);
 
+//Affichage en fonction des conditions
 if($phraseclean == strrev($phraseclean)) {
     echo "La phrase « $phrase » est palindrome.";
 } else {

@@ -7,6 +7,7 @@
 
 <?php
 
+//Affichage
 $jour = "aujourd'hui";
 echo $phrase = "Notre formation DL commence $jour. <br>";
 $jour = "demain";

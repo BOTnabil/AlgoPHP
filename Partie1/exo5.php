@@ -9,5 +9,7 @@ Attention, la valeur générée devra être arrondie à 2 décimales.
 <?php
 
 $franc = 100;
+
+//Affichage
 echo "Montant en francs : $franc<br>";
 echo $franc." francs = ".$euro=round($franc*0.1524, 2)." €";

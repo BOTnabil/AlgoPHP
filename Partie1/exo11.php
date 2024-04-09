@@ -9,8 +9,10 @@ d’afficher le nombre de marques de voitures présentes dans le tableau.
 
 <?php
 
+//Tableau
 $marques = ["Peugeot", "Renault", "BMW", "Mercedes"];
 
+//Affichage en PHP et HTML
 echo"Il y a ".$nbMarques= count( $marques ) ." marques de voitures dans le tableau :"; ?>
 
 <ul>

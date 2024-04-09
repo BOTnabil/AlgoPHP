@@ -2,7 +2,7 @@
 
 class Personne {
 
-    //atributs
+    //Attributs
     private string $nom;
     private string $prenom;
     private DateTime $dateDeNaissance;
@@ -13,9 +13,7 @@ class Personne {
         $this->dateDeNaissance = new DateTime($dateDeNaissance);
     }
 
-        //getter et setter 
-
-   
+    //getter et setter 
     public function getNom(): string 
     {
         return $this->nom;

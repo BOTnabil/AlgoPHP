@@ -9,9 +9,11 @@ plus de 20 ans, alors celle-ci est imposable (sinon ce n’est pas le cas, « no
 
 <?php
 
-$sexe = "M";
+$sexe = "F";
 $age = 36;
 
+
+//Affichage en fonction des paramètres
 echo "Age : $age<br>";
 echo "Sexe : $sexe<br>";
 

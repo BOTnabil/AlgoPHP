@@ -8,9 +8,10 @@
 
 <?php
 
+//On fait la difference des deux variables dates
 $dateRef = new DateTime('2018-05-21');
 $dateNaissance = new DateTime('1985-01-17');
 $interval = $dateRef->diff($dateNaissance);
 
-//On fait la difference des deux dates
+//Affichage
 echo "Age de la personne : ".$interval->format('%y ans %m mois %d jours');

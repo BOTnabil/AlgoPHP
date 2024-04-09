@@ -15,9 +15,10 @@ $formateurs = [
     "Marie-Claire" => "ENG"
 ];
 
-//variante
+//Variante
 ksort($formateurs);
 
+//Affichage
 foreach ($formateurs as $prenom => $langue) {
     if($langue == "FRA") {
         echo"Salut $prenom<br>";

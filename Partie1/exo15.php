@@ -10,17 +10,16 @@ $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17") ;
 
 <?php
 
+//Loading des classes
 spl_autoload_register(function ($class_name) {
     require $class_name . '.php';
 });
 
 //Nouvelles personnes
-
 $p1 = new Personne("DUPONT", "Michel", "1980-02-19");
 $p2 = new Personne("DUCHEMIN", "Alice", "1985-01-17");
 
 //Calcul de l'age
-
 $dateAjd = new DateTime() ;
 $age1 = $dateAjd->diff($p1->getDateDeNaissance());
 $age2 = $dateAjd->diff($p2->getDateDeNaissance());
