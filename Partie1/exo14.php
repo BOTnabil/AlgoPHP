@@ -1,4 +1,4 @@
-<h1>Exercice 13</h1>
+<h1>Exercice 14</h1>
 
 <p>Calculer l'âge exact d'une personne
  à partir de sa date de naissance (en années, mois, jours).
