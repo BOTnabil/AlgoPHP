@@ -1,6 +1,6 @@
 <?php
 
-class Voiture {
+class Voiture1 {
     // Propriétés
     public $marque;
     public $modele;

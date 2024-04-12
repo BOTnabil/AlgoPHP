@@ -15,8 +15,8 @@ spl_autoload_register(function ($class_name) {
 });
 
 // Création des objets v1 et v2
-$v1 = new Voiture("Peugeot", "408", 5);
-$v2 = new Voiture("Citroën", "C4", 3);
+$v1 = new Voiture1("Peugeot", "408", 5);
+$v2 = new Voiture1("Citroën", "C4", 3);
 
 
 //Affichage
