@@ -1,13 +1,13 @@
 <?php
 
 class Livre {
-    private $titre;
-    private $nbPages;
-    private $anneeParution;
-    private $prix;
-    private $auteur;
+    private string $titre;
+    private int $nbPages;
+    private int $anneeParution;
+    private float $prix;
+    private string $auteur;
 
-    public function __construct($titre, $nbPages, $anneeParution, $prix, $auteur) {
+    public function __construct(string $titre, int $nbPages, int $anneeParution, float $prix, string $auteur) {
         $this->titre = $titre;
         $this->nbPages = $nbPages;
         $this->anneeParution = $anneeParution;

@@ -1,9 +1,9 @@
 <?php
 
 class Auteur {
-    private $nom;
-    private $prenom;
-    private $livres;
+    private string $nom;
+    private string $prenom;
+    private array $livres;
 
     public function __construct($nom, $prenom) {
         $this->nom = $nom;
@@ -30,15 +30,16 @@ class Auteur {
     }
     
 //permet d'ajouter un livre a son auteur
-    public function ajouterLivre($livre) {
+    public function ajouterLivre(Livre $livre) {
         $this->livres[] = $livre;
     }
 
 //afficher la bibliographie de l'auteur
     public function afficherBibliographie() {
-        echo "<h2>Livres de " . $this->getPrenom() . " ". $this->getNom()."<br></h2>";
+        $result = "<h2>Livres de " . $this->getPrenom() . " ". $this->getNom()."<br></h2>";
         foreach ($this->livres as $livre) {
-            echo $livre ;
+            $result .= $livre ;
         }
+        return $result;
     }
 }
