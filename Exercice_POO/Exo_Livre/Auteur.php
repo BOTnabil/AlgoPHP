@@ -5,7 +5,7 @@ class Auteur {
     private string $prenom;
     private array $livres;
 
-    public function __construct($nom, $prenom) {
+    public function __construct(string $nom, string $prenom) {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->livres = array();
