@@ -15,28 +15,26 @@ $sexeRadio = array("Monsieur","Madame","Mademoiselle");
 $formationsListe = array("Développeur Logiciel ","Designer web","Intégrateur","Chef de projet ");
 
 //Affichage
-echo afficherInput($infoInput);
+echo "<form action='exo10.php'>".afficherInput($infoInput);
 echo afficherRadio($sexeRadio);
 echo alimenterListeDeroulante($formationsListe);
-echo "<br><input type='submit'>";
+echo "<br><input type='submit'></form>";
 
 //Fonction prenant les infos des array et les transforment en formulaire complet
 //champs de texte
 function afficherInput($infoInput) {
-    $result="<form action='exo5.php' method='POST'>";
+    $result="";
 foreach($infoInput as $info) {
     $result .= "$info: <br><input type='text' name='$info'><br>";
 }
-    $result .= "</form>";
     return $result;
 }
 //boutons radio
 function afficherRadio($elements) {
-    $result="<form action='exo9.php'>";
+    $result="";
     foreach($elements as $civi) {
-        $result .= "<input type='radio' name='radioGroup' value='$civi' >$civi<br>";
+        $result .= "<input type='radio' id='radio' name='radioGroup' value='$civi' ><label for='radio'>$civi</label><br>";
         }
-    $result .= "</form>";
     return $result;
 }
 //liste deroulante

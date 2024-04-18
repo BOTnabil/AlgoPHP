@@ -12,4 +12,4 @@ $franc = 100;
 
 //Affichage
 echo "Montant en francs : $franc<br>";
-echo $franc." francs = ".$euro=round($franc*0.1524, 2)." €";
+echo $franc." francs = ".round($franc*0.1524, 2)." €";

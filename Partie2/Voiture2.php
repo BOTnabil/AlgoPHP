@@ -2,23 +2,27 @@
 
 class Voiture2 {
     // Propriétés
-    public $marque;
-    public $modele;
+    private string $marque;
+    private string $modele;
 
     public function __construct($marque, $modele) {
         $this->marque = $marque;
         $this->modele = $modele;
     }
 
+    public function __toString(){
+        return $this->marque ." ".$this->modele;
+    }
+
     public function getInfos() {
-        return "Nom et modèle du véhicule : " . $this->marque." ".$this->modele."<br>";
+        return "Nom et modèle du véhicule : $this<br>";
     }
 }
 
 class VoitureElec extends Voiture2 {
-    private $autonomie;
+    private int $autonomie;
 
-    public function __construct($marque, $modele, $autonomie) {
+    public function __construct(string $marque, string $modele, int $autonomie) {
         parent::__construct($marque, $modele);
         $this->autonomie = $autonomie;
     }

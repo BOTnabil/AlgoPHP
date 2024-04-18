@@ -17,7 +17,7 @@ echo afficherRadio($nomsRadio);
 function afficherRadio($elements) {
     $result="<form action='exo9.php'>";
     foreach($elements as $civi) {
-        $result .= "<input type='radio' name='radioGroup' value='$civi' >$civi<br>";
+        $result .= "<input type='radio' id='radio' name='radioGroup' value='$civi' ><label for='radio'>$civi</label><br>";
         }
     $result .= "</form>";
     return $result;

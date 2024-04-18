@@ -16,14 +16,14 @@ class Livre {
     }
 
     //getter et setter
-    public function getTitre() {
+    public function getTitre(): string {
         return $this->titre;
     }
     public function setTitre($titre) {
         $this->titre = $titre;
     }
 
-    public function getPrix()
+    public function getPrix(): float 
     {
         return $this->prix;
     }
@@ -34,7 +34,7 @@ class Livre {
         return $this;
     }
 
-    public function getAuteur()
+    public function getAuteur(): string
     {
         return $this->auteur;
     }
@@ -45,7 +45,7 @@ class Livre {
         return $this;
     }
 
-    public function getAnneeParution()
+    public function getAnneeParution(): int
     {
         return $this->anneeParution;
     }
@@ -56,7 +56,7 @@ class Livre {
         return $this;
     }
 
-    public function getNbPages()
+    public function getNbPages(): int
     {
         return $this->nbPages;
     }

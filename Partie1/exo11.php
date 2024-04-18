@@ -12,12 +12,16 @@ d’afficher le nombre de marques de voitures présentes dans le tableau.
 //Tableau
 $marques = ["Peugeot", "Renault", "BMW", "Mercedes"];
 
-//Affichage en PHP et HTML
-echo"Il y a ".$nbMarques= count( $marques ) ." marques de voitures dans le tableau :"; ?>
+//Affichage
+echo"Il y a ".$nbMarques= count( $marques ) ." marques de voitures dans le tableau :"; 
 
-<ul>
-    <li> <?php echo $marques[0] ?>
-    <li> <?php echo $marques[1] ?>
-    <li> <?php echo $marques[2] ?>
-    <li> <?php echo $marques[3] ?>
-</ul>
+function AfficherListe(array $tableau){
+$result = "<ul>";
+foreach ($tableau as $donnees) {
+    $result .= "<li>$donnees</li>";
+}
+$result .= "</ul>";
+return $result;}
+
+
+echo AfficherListe($marques);

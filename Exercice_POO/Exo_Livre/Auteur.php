@@ -11,14 +11,14 @@ class Auteur {
         $this->livres = array();
     }
 
-    public function getNom() {
+    public function getNom(): string {
         return $this->nom;
     }
     public function setNom($nom) {
         $this->nom = $nom;
     }
 
-    public function getPrenom() {
+    public function getPrenom(): string {
         return $this->prenom;
     }
     public function setPrenom($prenom) {
@@ -36,7 +36,7 @@ class Auteur {
 
 //afficher la bibliographie de l'auteur
     public function afficherBibliographie() {
-        $result = "<h2>Livres de " . $this->getPrenom() . " ". $this->getNom()."<br></h2>";
+        $result = "<h2>Livres de $this<br></h2>";
         foreach ($this->livres as $livre) {
             $result .= $livre ;
         }

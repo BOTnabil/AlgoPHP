@@ -8,7 +8,5 @@
 <?php
 
 //Affichage
-$jour = "aujourd'hui";
-echo $phrase = "Notre formation DL commence $jour. <br>";
-$jour = "demain";
-echo $phrase = "Notre formation DL commence $jour. <br>";
+echo $phrase = "Notre formation DL commence aujourd'hui. <br>";
+echo str_replace("aujourd'hui", "demain", $phrase);

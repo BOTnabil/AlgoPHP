@@ -3,11 +3,11 @@
 class Titulaire {
     private string $nom;
     private string $prenom;
-    private $dateNaissance;
+    private string $dateNaissance;
     private string $ville;
     private array $comptesBancaires;
 
-    public function __construct(string $nom, string $prenom, $dateNaissance, string $ville) {
+    public function __construct(string $nom, string $prenom, string $dateNaissance, string $ville) {
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->dateNaissance = $dateNaissance;
@@ -15,20 +15,44 @@ class Titulaire {
         $this->comptesBancaires = array();
     }
 
-    public function getNom() {
+    public function getNom(): string {
         return $this->nom;
     }
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
 
-    public function getPrenom() {
+        return $this;
+    }
+
+    public function getPrenom(): string {
         return $this->prenom;
     }
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
 
-    public function getDateNaissance() {
-        return $this->dateNaissance;
+        return $this;
     }
 
-    public function getVille() {
+    public function getDateNaissance(): DateTime {
+        return $this->dateNaissance;
+    }
+    public function setDateNaissance($dateNaissance)
+    {
+        $this->dateNaissance = $dateNaissance;
+
+        return $this;
+    }
+
+    public function getVille(): string {
         return $this->ville;
+    }
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
     }
 
     public function ajouterCompteBancaire(CompteBancaire $compte) {
@@ -47,8 +71,8 @@ class Titulaire {
     }
 
     public function afficherInformations() {
-        $result = "Titulaire: " . $this->prenom . " " . $this->nom . "<br>
-        Date de naissance: " . $this->dateNaissance . "<br>
+        $result = "Titulaire: " .$this. "<br>
+        Date de naissance: " . $this->dateNaissance. "<br>
         Ville: " . $this->ville . "<br>
         Âge: " . $this->calculerAge() . " ans<br>
         Comptes bancaires:<br>";

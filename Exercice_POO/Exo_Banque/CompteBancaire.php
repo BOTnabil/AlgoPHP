@@ -13,21 +13,46 @@ class CompteBancaire {
         $this->titulaire = $titulaire;
     }
 
-    public function getLibelle() {
+    public function getLibelle(): string {
         return $this->libelle;
     }
+    public function setLibelle($libelle)
+    {
+        $this->libelle = $libelle;
 
-    public function getSolde() {
+        return $this;
+    }
+
+    public function getSolde(): float {
         return $this->solde;
     }
+    public function setSolde($solde)
+    {
+        $this->solde = $solde;
 
-    public function getDevise() {
+        return $this;
+    }
+
+    public function getDevise(): string {
         return $this->devise;
     }
+    public function setDevise($devise)
+    {
+        $this->devise = $devise;
 
-    public function getTitulaire() {
+        return $this;
+    }
+
+    public function getTitulaire(): string {
         return $this->titulaire;
     }
+    public function setTitulaire($titulaire)
+    {
+        $this->titulaire = $titulaire;
+
+        return $this;
+    }
+
 
     public function crediter($montant) {
         $this->solde += $montant;
@@ -41,10 +66,10 @@ class CompteBancaire {
         }
     }
 
-    public function effectuerVirement($destinataire, $montant) {
+    public function effectuerVirement($compteCible, $montant) {
         if ($this->solde >= $montant) {
             $this->debiter($montant);
-            $destinataire->crediter($montant);
+            $compteCible->crediter($montant);
         } else {
             echo "Solde insuffisant pour effectuer le virement.<br>";
         }
@@ -61,4 +86,3 @@ class CompteBancaire {
         return $this->libelle . " (" . $this->solde . " " . $this->devise . ")<br>";
     }
 }
-
